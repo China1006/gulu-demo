@@ -13,7 +13,18 @@
 </template>
 <script>
   export default {
-    props: ['icon','icon-position'],
+    //props: ['icon','icon-position'],
+    props:{
+      icon:{},
+      iconPosition: {
+        type: String,
+        default: 'left',
+        //表单检验
+        validator (value){
+          return value === 'left' || value === 'right'
+        }
+      }
+    }
   }
 </script>
 <style lang="scss">
