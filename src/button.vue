@@ -1,5 +1,4 @@
 <template>
-  <div>
     <button class="g-button"
             :class="{[`icon-${iconPosition}`]: true}"
             @click="$emit('click')">
@@ -9,7 +8,6 @@
         <slot></slot>
       </div>
     </button>
-  </div>
 </template>
 <script>
   export default {
@@ -31,7 +29,7 @@
     },
   }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   @keyframes spin {
     0%{
       transform: rotate(0deg);
