@@ -37,7 +37,13 @@
 </head>
 <body>
 <div id="app">
-  <g-button icon="settings" icon-position="right">
+  <g-button :loading="loading1" @click="loading1 = !loading1">
+    我爱js
+  </g-button>
+  <g-button icon="settings" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
+    我爱js
+  </g-button>
+  <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
     我爱js
   </g-button>
 </div>
