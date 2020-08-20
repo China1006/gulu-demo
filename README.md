@@ -1,5 +1,5 @@
 # 轱辘	一个vue的造轮子
-作者：xin
+
 [![Build Status](https://travis-ci.org/China1006/gulu-demo.svg?branch=master)](https://travis-ci.org/China1006/gulu-demo)
 ## 介绍
 ## 开始使用
