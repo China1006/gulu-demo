@@ -41,11 +41,11 @@
 </head>
 <body>
 <div id="app">
-  <g-row>
+  <g-row gutter="20">
     <g-col>1</g-col>
     <g-col>2</g-col>
   </g-row>
-  <g-row>
+  <g-row gutter="10">
     <g-col>1</g-col>
     <g-col>2</g-col>
     <g-col>2</g-col>
@@ -59,6 +59,10 @@
   <g-row>
     <g-col span="2">1</g-col>
     <g-col span="22">2</g-col>
+  </g-row>
+  <g-row>
+    <g-col span="2">1</g-col>
+    <g-col span="18" offset="4">2</g-col>
   </g-row>
   <div class="box">
     <g-input v-model="message"></g-input>
