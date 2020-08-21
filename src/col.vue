@@ -51,7 +51,7 @@
           ...createClasses(ipad,'ipad-'),
           ...createClasses(narrowPc,'narrowPc-'),
           ...createClasses(pc,'pc-'),
-          ...createClasses(widePc,'widePc'),
+          ...createClasses(widePc,'widePc-'),
         ]
       },
       colStyle() {
