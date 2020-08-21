@@ -25,8 +25,6 @@
     }
 
     #app {
-      margin: 20px;
-
     }
 
     body {
@@ -45,48 +43,55 @@
   </style>
 </head>
 <body>
-
 <div id="app">
-  <g-row>
-    <g-col span="24" :narrow-pc="{span:8}" >
-    <div class="demo"></div></g-col>
-    <g-col span="24" :narrow-pc="{span:8}" >
-    <div class="demo"></div></g-col>
-    <g-col span="24" :narrow-pc="{span:8}" >
-    <div class="demo"></div></g-col>
-    <g-col span="24" :narrow-pc="{span:8}" >
-    <div class="demo"></div></g-col>
-    <g-col span="24" :narrow-pc="{span:8}">
-    <div class="demo"></div></g-col>
-    <g-col span="24" :narrow-pc="{span:8}">
-      <div class="demo"></div></g-col>
-  </g-row>
-  <div class="box">
-    <g-input v-model="message"></g-input>
-    <g-input value="未知" disabled></g-input>
-    <g-input value="未知" readonly></g-input>
-    <g-input value="未知" @change="inputChange"></g-input>
-  </div>
-  <div class="box">
-    <g-input value="未知" error="姓名不能少于两个字"></g-input>
-  </div>
+  <g-layout style="height: 100vh">
+    <g-sider>sider</g-sider>
+    <g-layout>
+      <g-header class="demo">header</g-header>
+      <g-content class="demo">content</g-content>
+      <g-footer class="demo">footer</g-footer>
+    </g-layout>
+  </g-layout>
+<!--  <g-row>-->
+<!--    <g-col span="24" :narrow-pc="{span:8}" >-->
+<!--    <div class="demo"></div></g-col>-->
+<!--    <g-col span="24" :narrow-pc="{span:8}" >-->
+<!--    <div class="demo"></div></g-col>-->
+<!--    <g-col span="24" :narrow-pc="{span:8}" >-->
+<!--    <div class="demo"></div></g-col>-->
+<!--    <g-col span="24" :narrow-pc="{span:8}" >-->
+<!--    <div class="demo"></div></g-col>-->
+<!--    <g-col span="24" :narrow-pc="{span:8}">-->
+<!--    <div class="demo"></div></g-col>-->
+<!--    <g-col span="24" :narrow-pc="{span:8}">-->
+<!--      <div class="demo"></div></g-col>-->
+<!--  </g-row>-->
+<!--  <div class="box">-->
+<!--    <g-input v-model="message"></g-input>-->
+<!--    <g-input value="未知" disabled></g-input>-->
+<!--    <g-input value="未知" readonly></g-input>-->
+<!--    <g-input value="未知" @change="inputChange"></g-input>-->
+<!--  </div>-->
+<!--  <div class="box">-->
+<!--    <g-input value="未知" error="姓名不能少于两个字"></g-input>-->
+<!--  </div>-->
 
-  <div style="margin: 20px">
-    <g-button :loading="loading1" @click="loading1 = !loading1">
-      我爱js
-    </g-button>
-    <g-button icon="settings" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
-      我爱js
-    </g-button>
-    <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-      我爱js
-    </g-button>
-    <g-button-group>
-      <g-button icon="left">上一页</g-button>
-      <g-button>更多</g-button>
-      <g-button icon="right" icon-position="right">下一页</g-button>
-    </g-button-group>
-  </div>
+<!--  <div style="margin: 20px">-->
+<!--    <g-button :loading="loading1" @click="loading1 = !loading1">-->
+<!--      我爱js-->
+<!--    </g-button>-->
+<!--    <g-button icon="settings" icon-position="right" :loading="loading2" @click="loading2 = !loading2">-->
+<!--      我爱js-->
+<!--    </g-button>-->
+<!--    <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">-->
+<!--      我爱js-->
+<!--    </g-button>-->
+<!--    <g-button-group>-->
+<!--      <g-button icon="left">上一页</g-button>-->
+<!--      <g-button>更多</g-button>-->
+<!--      <g-button icon="right" icon-position="right">下一页</g-button>-->
+<!--    </g-button-group>-->
+<!--  </div>-->
 </div>
 <script src="./src/app.js"></script>
 </body>
