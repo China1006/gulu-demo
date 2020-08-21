@@ -38,11 +38,10 @@
         let {span, offset, ipad,narrowPc,pc,widePc} = this
         return [span && `col-${span}`,
           offset && `offset-${offset}`,
-          ...(ipad && [`col-ipad-${ipad.span}`]),
-          ...(narrowPc && [`col-narrowPc-${narrowPc.span}`]),
-          ...(pc && [`col-pc-${pc.span}`]),
-          ...(widePc && [`col-widePc-${widePc.span}`])
-
+          ...(ipad? [`col-ipad-${ipad.span}`] : []),
+          ...(narrowPc ? [`col-narrowPc-${narrowPc.span}`] :[]),
+          ...(pc ? [`col-pc-${pc.span}`] :[]),
+          ...(widePc ? [`col-widePc-${widePc.span}`]:[])
         ]
       },
       colStyle() {
@@ -69,7 +68,7 @@
         width: ($n / 24) * 100%;
       }
     }
-    @media(min-width:577px) and (max-width:768px) {
+    @media(min-width:577px) {
       $class: col-ipad-;
       @for $n from 1 through 24 {
         &.#{$class}#{$n} {
@@ -83,21 +82,21 @@
         }
       }
     }
-    @media(min-width: 769px) and (max-width:992px) {
-      $class: col-narrow-pc-;
+    @media(min-width: 769px) {
+      $class: col-narrowPc-;
       @for $n from 1 through 24 {
         &.#{$class}#{$n} {
           width: ($n / 24) * 100%;
         }
       }
-      $class: offset-narrow-pc-;
+      $class: offset-narrowPc-;
       @for $n from 1 through 24 {
         &.#{$class}#{$n} {
           margin-left: ($n / 24) * 100%;
         }
       }
     }
-    @media(min-width: 993px) and (max-width:1200px) {
+    @media(min-width: 993px) {
       $class: col-pc-;
       @for $n from 1 through 24 {
         &.#{$class}#{$n} {
@@ -112,13 +111,13 @@
       }
     }
     @media (min-width:1201px) {
-      $class: col-wide-pc-;
+      $class: col-widePc-;
       @for $n from 1 through 24 {
         &.#{$class}#{$n} {
           width: ($n / 24) * 100%;
         }
       }
-      $class: offset-wide-pc-;
+      $class: offset-widePc-;
       @for $n from 1 through 24 {
         &.#{$class}#{$n} {
           margin-left: ($n / 24) * 100%;
