@@ -35,7 +35,6 @@ new Vue({
     message: 'hi'
   },
   created(){
-
   },
   methods: {
     showToast(){
