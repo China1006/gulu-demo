@@ -35,10 +35,11 @@ new Vue({
     message: 'hi'
   },
   created(){
+    this.$toast('<p>段落<a href="">hi</a></p>',{})
   },
   methods: {
     showToast(){
-      this.$toast('我是message')
+
     }
   }
 });
