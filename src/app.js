@@ -35,7 +35,16 @@ new Vue({
     message: 'hi'
   },
   created(){
-    this.$toast('<p>段落<a href="">hi</a></p>',{})
+    this.$toast('你的智商需要充值！',{
+      position: 'middle',
+      closeButton: {
+        text: '已充值',
+        callback(){
+          console.log('充值成功');
+        }
+      },
+      autoClose: false
+    })
   },
   methods: {
     showToast(){
