@@ -35,20 +35,20 @@ new Vue({
     message: 'hi'
   },
   created(){
-    this.$toast('你的智商需要充值！',{
-      position: 'middle',
-      closeButton: {
-        text: '已充值',
-        callback(){
-          console.log('充值成功');
-        }
-      },
-      autoClose: false
-    })
+
   },
   methods: {
     showToast(){
-
+      this.$toast('你的智商需要充值！',{
+        position: 'middle',
+        closeButton: {
+          text: '已充值',
+          callback(){
+            console.log('充值成功');
+          }
+        },
+        autoClose: false
+      })
     }
   }
 });
