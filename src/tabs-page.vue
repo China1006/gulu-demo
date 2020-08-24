@@ -36,8 +36,9 @@
 
 <style lang='scss' scoped>
 .tabs-page{
+  padding: 1em;
   &.active{
-    background: blue;
+
   }
 }
 </style>
