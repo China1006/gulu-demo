@@ -22,7 +22,7 @@ describe('Tabs', () => {
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
-      <g-tabs selected="finance"" >
+      <g-tabs selected="finance">
         <g-tabs-head>
           <g-tabs-item name="woman">美女</g-tabs-item>
           <g-tabs-item name="finance">财经</g-tabs-item>
@@ -44,8 +44,5 @@ describe('Tabs', () => {
       vm.$el.remove()
       vm.$destroy()
     })
-    it('可以接收direction props', ()=> {
-
-    });
   })
 })

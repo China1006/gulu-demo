@@ -33,13 +33,9 @@
       }
     },
     mounted() {
-      if(this.eventBus){
-        this.eventBus.$on('update:selected',(name)=>{
+        this.eventBus && this.eventBus.$on('update:selected',(name)=>{
           this.active = name === this.name;
         })
-      }
-
-
     },
     methods:{
       onClick(){
