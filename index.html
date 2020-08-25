@@ -33,22 +33,34 @@
   </style>
 </head>
 <body>
-<div id="app">
-  <g-tabs :selected.sync="selectedTab" >
-    <g-tabs-head>
-      <template slot="actions">
-        <button>设置</button>
-      </template>
-      <g-tabs-item name="woman"><g-icon name="left"></g-icon>美女</g-tabs-item>
-      <g-tabs-item name="finance" disabled>财经</g-tabs-item>
-      <g-tabs-item name="sports">体育</g-tabs-item>
-    </g-tabs-head>
-    <g-tabs-body>
-      <g-tabs-page name="woman">美女咨询</g-tabs-page>
-      <g-tabs-page name="finance">财经咨询</g-tabs-page>
-      <g-tabs-page name="sports">体育咨询</g-tabs-page>
-    </g-tabs-body>
-  </g-tabs>
+<div id="app" style="padding-top: 100px; padding-left: 100px">
+  <g-popover>
+    <template slot="content">
+      <div>1</div>
+    </template>
+      <button>点我</button>
+  </g-popover>
+  <g-popover>
+    <template slot="content">
+      <div>2</div>
+    </template>
+    <button>点我</button>
+  </g-popover>
+<!--  <g-tabs :selected.sync="selectedTab" >-->
+<!--    <g-tabs-head>-->
+<!--      <template slot="actions">-->
+<!--        <button>设置</button>-->
+<!--      </template>-->
+<!--      <g-tabs-item name="woman"><g-icon name="left"></g-icon>美女</g-tabs-item>-->
+<!--      <g-tabs-item name="finance" disabled>财经</g-tabs-item>-->
+<!--      <g-tabs-item name="sports">体育</g-tabs-item>-->
+<!--    </g-tabs-head>-->
+<!--    <g-tabs-body>-->
+<!--      <g-tabs-page name="woman">美女咨询</g-tabs-page>-->
+<!--      <g-tabs-page name="finance">财经咨询</g-tabs-page>-->
+<!--      <g-tabs-page name="sports">体育咨询</g-tabs-page>-->
+<!--    </g-tabs-body>-->
+<!--  </g-tabs>-->
 <!--  <button @click="showToast1">top</button>-->
 <!--  <button @click="showToast2">middle</button>-->
 <!--  <button @click="showToast3">bottom</button>-->
