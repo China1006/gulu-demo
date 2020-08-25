@@ -1,46 +1,55 @@
 <template>
   <div class="popover" @click.stop="xxx">
-    <div class="content-wrapper" v-if="visible" @click.stop>
-      <slot name="content" ></slot>
+    <div ref="contentWrapper" class="content-wrapper" v-if="visible" @click.stop>
+      <slot name="content"></slot>
     </div>
-    <slot></slot>
+    <span ref="triggerWrapper">
+      <slot></slot>
+    </span>
   </div>
 </template>
 
 <script lang='ts'>
   export default {
     name: 'GuluPopover',
-    data(){
-      return {visible: false}
+    data() {
+      return {visible: false};
     },
-    methods:{
-      xxx(){
-        this.visible = !this.visible
-        if (this.visible === true){
-          this.$nextTick(()=>{
-            let eventHandler = ()=>{
-              this.visible = false
-              document.removeEventListener('click',eventHandler)
-            }
-            document.addEventListener('click',eventHandler)
-          })
+    methods: {
+      xxx() {
+        this.visible = !this.visible;
+        if (this.visible === true) {
+          this.$nextTick(() => {
+            document.body.appendChild(this.$refs.contentWrapper);
+            let {top, left} = this.$refs.triggerWrapper.getBoundingClientRect();
+            this.$refs.contentWrapper.style.left = left + screenX + 'px';
+            this.$refs.contentWrapper.style.top = top + scrollY + 'px';
+            let eventHandler = () => {
+              this.visible = false;
+              document.removeEventListener('click', eventHandler);
+            };
+            document.addEventListener('click', eventHandler);
+          });
         }
       }
+    },
+    mounted() {
+
     }
   };
 </script>
 
 <style lang='scss' scoped>
-.popover{
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  .content-wrapper{
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    border: 1px solid red;
-    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  .popover {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
   }
-}
+
+  .content-wrapper {
+    position: absolute;
+    border: 1px solid red;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    transform: translateY(-100%);
+  }
 </style>
