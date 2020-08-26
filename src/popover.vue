@@ -18,19 +18,22 @@
     },
     mounted(){
       if (this.trigger === 'click'){
-        this.$refs.popover.addEventListener('click',this.onClick)
+        this.$refs.popover && this.$refs.popover.addEventListener('click',this.onClick)
       }else{
-        this.$refs.popover.addEventListener('mouseenter',this.open)
-        this.$refs.popover.addEventListener('mouseleave',this.close)
+        this.$refs.popover && this.$refs.popover.addEventListener('mouseenter',this.open)
+        this.$refs.popover && this.$refs.popover.addEventListener('mouseleave',this.close)
       }
     },
     destroyed(){
-      if (this.trigger === 'click'){
-        this.$refs.popover.removeEventListener('click',this.onClick)
-      }else{
-        this.$refs.popover.removeEventListener('mouseenter',this.open)
-        this.$refs.popover.removeEventListener('mouseleave',this.close)
+      if (this.$refs.popover){
+        if (this.trigger === 'click'){
+          this.$refs.popover.removeEventListener('click',this.onClick)
+        }else{
+          this.$refs.popover.removeEventListener('mouseenter',this.open)
+          this.$refs.popover.removeEventListener('mouseleave',this.close)
+        }
       }
+
     },
     computed: {
       openEvent(){
@@ -156,6 +159,7 @@
 
       &::before, &::after {
         left: 10px;
+        border-bottom: none;
       }
 
       &::before {
@@ -168,12 +172,12 @@
         top: calc(100% - 1px);
       }
     }
-
     &.position-bottom {
       margin-top: 10px;
 
       &::before, &::after {
         left: 10px;
+        border-top: none;
       }
 
       &::before {
@@ -194,6 +198,7 @@
       &::before, &::after {
         transform: translateY(-50%);
         top: 50%;
+        border-right: none;
       }
 
       &::before {
@@ -213,6 +218,7 @@
       &::before, &::after {
         transform: translateY(-50%);
         top: 50%;
+        border-left: none;
       }
 
       &::before {
