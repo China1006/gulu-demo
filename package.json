@@ -24,9 +24,6 @@
   },
   "homepage": "https://github.com/China1006/gulu-demo#readme",
   "dependencies": {
-    "chai": "^4.2.0",
-    "chai-spies": "^1.0.0",
-    "sass-loader": "^10.0.1",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4"
   },
@@ -40,6 +37,9 @@
     "karma-sinon-chai": "^2.0.2",
     "mocha": "^8.1.1",
     "parcel-bundler": "^1.12.4",
+    "chai": "^4.2.0",
+    "chai-spies": "^1.0.0",
+    "sass-loader": "^10.0.1",
     "sass": "^1.26.10",
     "sinon": "^9.0.3",
     "sinon-chai": "^3.5.0",

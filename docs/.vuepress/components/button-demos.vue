@@ -4,12 +4,7 @@
     <g-button icon="right" icon-position="right">默认按钮</g-button>
     <g-button loading>默认按钮</g-button>
     <g-button disabled>默认按钮</g-button>
-    <pre>
-      <code>
-        {{content}}
-      </code>
-
-    </pre>
+    <pre><code>{{content}}</code></pre>
   </div>
 </template>
 
@@ -27,7 +22,7 @@
         <g-button icon="right" icon-position="right">默认按钮</g-button>
         <g-button loading>默认按钮</g-button>
         <g-button disabled>默认按钮</g-button>
-        `
+        `.replace(/\t+| +/g,'').trim()
       }
     }
   }
