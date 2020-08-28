@@ -36,9 +36,11 @@
 </script>
 
 <style lang='scss' scoped>
+  $outline-color: gray;
   .row{
     display: flex;
     flex-wrap: wrap;
+    outline: 1px solid $outline-color;
     &.align-left{
       justify-content: flex-start;
     }

@@ -11,7 +11,8 @@
 </script>
 
 <style lang='scss' scoped>
-.footer{
-
-}
+  $border-color: #666666;
+  .footer {
+    border: 1px solid $border-color;
+  }
 </style>

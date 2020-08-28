@@ -65,7 +65,11 @@
 </script>
 
 <style lang='scss' >
+  $outline-color: green;
+  $height: 40px;
   .col {
+    height: $height;
+    outline: 1px solid $outline-color;
     $class: col-;
     @for $n from 1 through 24 {
       &.#{$class}#{$n} {

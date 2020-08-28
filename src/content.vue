@@ -11,7 +11,9 @@
 </script>
 
 <style lang='scss' scoped>
+  $border-color: #333;
 .content{
+  border: 1px solid $border-color;
   flex-grow: 1;
 }
 </style>

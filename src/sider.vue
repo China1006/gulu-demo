@@ -8,6 +8,7 @@
 </template>
 
 <script lang='ts'>
+
   export default {
     name: 'GuluSider',
     data(){
@@ -21,7 +22,10 @@
 </script>
 
 <style lang='scss' scoped>
+  $border-color: gray;
   .sider{
+    width: 100px;
+    border: 1px solid $border-color;
     position: relative;
     >button{
       position: absolute;
@@ -33,6 +37,6 @@
     transition: all .5s;
   }
   .sider-enter, .slide-leave-to{
-    margin-left: -200px;
+    margin-left: -135px;
   }
 </style>

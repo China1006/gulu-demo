@@ -13,10 +13,14 @@
     name: 'GuluTabsHead',
     inject: ['eventBus'],
     mounted(){
+      let offsetLeft = 0;
       this.eventBus.$on('update:selected',(item,vm)=>{
         let {width,left} = vm.$el.getBoundingClientRect();
+        if (vm.name === 'woman'){
+          offsetLeft = left;
+        }
         this.$refs.line.style.width = `${width}px`;
-        this.$refs.line.style.left = `${left}px`
+        this.$refs.line.style.left = `${left-offsetLeft}px`
       })
     }
   };

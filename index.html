@@ -33,7 +33,7 @@
   </style>
 </head>
 <body>
-<div id="app" style="padding: 100px">
+<div id="app" style="margin: 100px">
 <!--  <g-collapse :selected.sync="selectedTab" single >-->
 <!--    <g-collapse-item title="标题1" name="1">内容1</g-collapse-item>-->
 <!--    <g-collapse-item title="标题2" name="2">内容2</g-collapse-item>-->
@@ -42,30 +42,30 @@
 <!--  {{selectedTab}}-->
 <!--  <div style="padding-top: 50px" >-->
 <!--    <g-popover position="bottom" trigger="click">-->
-<!--      <template slot="content" slot-scope="{close}">-->
-<!--        <div>1</div>-->
-<!--        <g-button @click="close">关闭</g-button>-->
-<!--      </template>-->
-<!--      <g-button>点我</g-button>-->
-<!--    </g-popover>-->
-<!--    <g-popover position="top">-->
-<!--      <template slot="content">-->
-<!--        <div>2</div>-->
-<!--      </template>-->
-<!--      <g-button>点我</g-button>-->
-<!--    </g-popover>-->
-<!--    <g-popover position="left">-->
-<!--      <template slot="content">-->
-<!--        <div>2</div>-->
-<!--      </template>-->
-<!--      <g-button>点我</g-button>-->
-<!--    </g-popover>-->
-<!--    <g-popover position="right">-->
-<!--      <template slot="content">-->
-<!--        <div>2</div>-->
-<!--      </template>-->
-<!--      <g-button>点我</g-button>-->
-<!--    </g-popover>-->
+  <!--      <template slot="content" slot-scope="{close}">-->
+  <!--        <div>1</div>-->
+  <!--        <g-button @click="close">关闭</g-button>-->
+  <!--      </template>-->
+  <!--      <g-button>点我</g-button>-->
+  <!--    </g-popover>-->
+  <!--    <g-popover position="top">-->
+  <!--      <template slot="content">-->
+  <!--        <div>2</div>-->
+  <!--      </template>-->
+  <!--      <g-button>点我</g-button>-->
+  <!--    </g-popover>-->
+  <!--    <g-popover position="left">-->
+  <!--      <template slot="content">-->
+  <!--        <div>2</div>-->
+  <!--      </template>-->
+  <!--      <g-button>点我</g-button>-->
+  <!--    </g-popover>-->
+  <!--    <g-popover position="right">-->
+  <!--      <template slot="content">-->
+  <!--        <div>2</div>-->
+  <!--      </template>-->
+  <!--      <g-button>点我</g-button>-->
+  <!--    </g-popover>-->
 <!--  </div>-->
 <!--  <div style="padding-bottom: 50px;padding-top: 10px" >-->
 <!--    <g-popover position="bottom" trigger="hover">-->
@@ -93,7 +93,7 @@
 <!--      <g-button>点我</g-button>-->
 <!--    </g-popover>-->
 <!--  </div>-->
-<!--  <g-tabs ：selected.sync="woman" >-->
+<!--  <g-tabs selected="woman">-->
 <!--    <g-tabs-head>-->
 <!--      <template slot="actions">-->
 <!--        <button>设置</button>-->
@@ -120,19 +120,19 @@
 <!--      <g-footer >footer</g-footer>-->
 <!--    </g-layout>-->
 <!--  </g-layout>-->
-<!--  <g-row>-->
+<!--  <g-row style="border: 1px solid red">-->
+<!--    <g-col span="24" :narrow-pc="{span:8}" style="border: 1px solid green; height: 10px">-->
+<!--    </g-col>-->
 <!--    <g-col span="24" :narrow-pc="{span:8}" >-->
-<!--    <div class="demo"></div></g-col>-->
+<!--    </g-col>-->
 <!--    <g-col span="24" :narrow-pc="{span:8}" >-->
-<!--    <div class="demo"></div></g-col>-->
+<!--    </g-col>-->
 <!--    <g-col span="24" :narrow-pc="{span:8}" >-->
-<!--    <div class="demo"></div></g-col>-->
-<!--    <g-col span="24" :narrow-pc="{span:8}" >-->
-<!--    <div class="demo"></div></g-col>-->
+<!--    </g-col>-->
 <!--    <g-col span="24" :narrow-pc="{span:8}">-->
-<!--    <div class="demo"></div></g-col>-->
+<!--</g-col>-->
 <!--    <g-col span="24" :narrow-pc="{span:8}">-->
-<!--      <div class="demo"></div></g-col>-->
+<!--      </g-col>-->
 <!--  </g-row>-->
 <!--  <div class="box">-->
 <!--    <g-input v-model="message"></g-input>-->
@@ -145,15 +145,15 @@
 <!--  </div>-->
 
 <!--  <div style="margin: 20px">-->
-    <g-button :loading="loading1" @click="loading1 = !loading1">
-      我爱js
-    </g-button>
-    <g-button icon="settings" icon-position="right" :loading="loading2" @click="loading2 = !loading2">
-      我爱js
-    </g-button>
-    <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-      我爱js
-    </g-button>
+<!--    <g-button :loading="loading1" @click="loading1 = !loading1">-->
+<!--      我爱js-->
+<!--    </g-button>-->
+<!--    <g-button icon="settings" icon-position="right" :loading="loading2" @click="loading2 = !loading2">-->
+<!--      我爱js-->
+<!--    </g-button>-->
+<!--    <g-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">-->
+<!--      我爱js-->
+<!--    </g-button>-->
 <!--    <g-button-group>-->
 <!--      <g-button icon="left">上一页</g-button>-->
 <!--      <g-button>更多</g-button>-->

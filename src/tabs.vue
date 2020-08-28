@@ -11,7 +11,7 @@
     props:{
       selected:{
         type: String,
-        required:true
+        required: true
       },
       direction:{
         type: String,
